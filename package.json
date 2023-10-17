@@ -25,7 +25,9 @@
   "homepage": "https://github.com/unipackage/utils#readme",
   "dependencies": {
     "@types/lodash": "^4.14.199",
-    "@types/node": "20.6.2"
+    "@types/node": "20.6.2",
+    "num-format": "^0.1.1",
+    "pretty-bytes": "^6.1.1"
   },
   "devDependencies": {
     "typescript": "^5.2.2"
