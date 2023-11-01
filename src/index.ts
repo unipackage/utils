@@ -1,4 +1,4 @@
-export { MemberVariables } from "./memberVariables"
+export { TypeFromProperties } from "./typeFromProperties"
 export { getProperty } from "./generateGet"
 export { equal, IEqual } from "./compare"
 export { Result } from "./result"
