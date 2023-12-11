@@ -1,6 +1,6 @@
 {
   "name": "@unipackage/utils",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "utils",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,7 +25,7 @@
     "js"
   ],
   "author": "waynewyang",
-  "license":  "MIT and APACHE",
+  "license": "MIT and APACHE",
   "bugs": {
     "url": "https://github.com/unipackage/utils/issues"
   },
