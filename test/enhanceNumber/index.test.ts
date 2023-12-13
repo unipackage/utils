@@ -18,27 +18,25 @@
  *  limitations under the respective licenses.
  ********************************************************************************/
 
-//@ts-ignore
 import assert from "assert"
 import { it } from "mocha"
-import { Capacity } from "../../src/capacity"
+import { EnhanceNumber } from "../../src/enhanceNumber"
 
 //@ts-ignore
-describe("Capacity Test", () => {
-    it("prettyBytes test(number)", () => {
-        const res = new Capacity(1024 * 1024)
-        assert.deepStrictEqual(res.prettyBytes(), "1 MiB")
+describe("EnhanceNumber Test", () => {
+    it("formatPercent test", () => {
+        const res = new EnhanceNumber(0.35565656).formatPercent(2)
+        assert.deepStrictEqual(res, "35.57%")
     })
 
-    it("prettyBytes test(string)", () => {
-        const res = new Capacity("1024")
-        assert.deepStrictEqual(res.prettyBytes(), "1 kiB")
+    it("formatNumber test", () => {
+        const res = new EnhanceNumber(0.35565656).formatNumber(2)
+        assert.deepStrictEqual(res, "0.36")
     })
 
-    it("plus test(string)", () => {
-        const capacity1 = new Capacity("1024")
-        const capacity2 = new Capacity("1024")
-
-        assert.deepStrictEqual(capacity1.plus(capacity2).prettyBytes(), "2 kiB")
+    it("formatNumber test", () => {
+        const en1 = new EnhanceNumber(1.25)
+        const en2 = new EnhanceNumber(2.3)
+        assert.deepStrictEqual(en1.plus(en2).formatNumber(1), "3.6")
     })
 })

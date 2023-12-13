@@ -1,6 +1,4 @@
 export { TypeFromProperties } from "./typeFromProperties"
-export { getProperty } from "./generateGet"
-export { equal, IEqual } from "./compare"
 export { Result } from "./result"
 export { Capacity, DefaultCapacityOptions } from "./capacity"
 export { EnhanceNumber } from "./enhanceNumber"

@@ -21,24 +21,12 @@
 //@ts-ignore
 import assert from "assert"
 import { it } from "mocha"
-import { Capacity } from "../../src/capacity"
+import { Result } from "../../src/result"
 
 //@ts-ignore
-describe("Capacity Test", () => {
-    it("prettyBytes test(number)", () => {
-        const res = new Capacity(1024 * 1024)
-        assert.deepStrictEqual(res.prettyBytes(), "1 MiB")
-    })
-
-    it("prettyBytes test(string)", () => {
-        const res = new Capacity("1024")
-        assert.deepStrictEqual(res.prettyBytes(), "1 kiB")
-    })
-
-    it("plus test(string)", () => {
-        const capacity1 = new Capacity("1024")
-        const capacity2 = new Capacity("1024")
-
-        assert.deepStrictEqual(capacity1.plus(capacity2).prettyBytes(), "2 kiB")
+describe("Result Test", () => {
+    it("usage", () => {
+        const res: Result<string> = { ok: true, data: "test" }
+        assert.deepStrictEqual(res.data, "test")
     })
 })
