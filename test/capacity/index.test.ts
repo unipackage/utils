@@ -24,17 +24,17 @@ import { Capacity } from "../../src/capacity"
 
 //@ts-ignore
 describe("Capacity Test", () => {
-    it("prettyBytes test(number)", async () => {
+    it("prettyBytes test(number)", () => {
         const res = new Capacity(1024 * 1024)
         assert.deepStrictEqual(res.prettyBytes(), "1 MiB")
     })
 
-    it("prettyBytes test(string)", async () => {
+    it("prettyBytes test(string)", () => {
         const res = new Capacity("1024")
         assert.deepStrictEqual(res.prettyBytes(), "1 kiB")
     })
 
-    it("plus test(string)", async () => {
+    it("plus test(string)", () => {
         const capacity1 = new Capacity("1024")
         const capacity2 = new Capacity("1024")
 
