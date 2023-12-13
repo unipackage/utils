@@ -20,10 +20,24 @@
 
 import assert from "assert"
 import { it } from "mocha"
+import { Capacity } from "../../src/capacity"
 
 //@ts-ignore
-describe("xxxx Test", () => {
-    it("xxxx test", async () => {
-        console.log("ok")
+describe("Capacity Test", () => {
+    it("prettyBytes test(number)", async () => {
+        const res = new Capacity(1024 * 1024)
+        assert.deepStrictEqual(res.prettyBytes(), "1 MiB")
+    })
+
+    it("prettyBytes test(string)", async () => {
+        const res = new Capacity("1024")
+        assert.deepStrictEqual(res.prettyBytes(), "1 kiB")
+    })
+
+    it("plus test(string)", async () => {
+        const capacity1 = new Capacity("1024")
+        const capacity2 = new Capacity("1024")
+
+        assert.deepStrictEqual(capacity1.plus(capacity2).prettyBytes(), "2 kiB")
     })
 })
