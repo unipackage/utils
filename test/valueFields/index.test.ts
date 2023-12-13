@@ -21,7 +21,7 @@
 //@ts-ignore
 import assert from "assert"
 import { it } from "mocha"
-import { TypeFromProperties } from "../../src/typeFromProperties"
+import { ValueFields } from "../../src/valueFields"
 
 interface Base {
     boolElement: boolean
@@ -30,9 +30,9 @@ interface Base {
 }
 
 //@ts-ignore
-describe("TypeFromProperties Test", () => {
+describe("ValueFields Test", () => {
     it("usage", () => {
-        const expected: TypeFromProperties<Base> = {
+        const expected: ValueFields<Base> = {
             boolElement: true,
             stringElement: "test",
         }

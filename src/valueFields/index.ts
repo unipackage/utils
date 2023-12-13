@@ -1,4 +1,4 @@
-export type TypeFromProperties<T> = Pick<
+export type ValueFields<T> = Pick<
     T,
     {
         [K in keyof T]: T[K] extends Function ? never : K
