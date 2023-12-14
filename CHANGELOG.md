@@ -1,5 +1,12 @@
 
 
+## [1.1.1](https://github.com/unipackage/utils/compare/v1.1.0...v1.1.1) (2023-12-14)
+
+
+### Bug Fixes
+
+* 🐛 export equal ([2f85603](https://github.com/unipackage/utils/commit/2f856036367f6ea28131e614f42a843684f504f9))
+
 # [1.1.0](https://github.com/unipackage/utils/compare/v1.0.0...v1.1.0) (2023-12-14)
 
 
