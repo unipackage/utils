@@ -1,5 +1,12 @@
 
 
+# [1.1.0](https://github.com/unipackage/utils/compare/v1.0.0...v1.1.0) (2023-12-14)
+
+
+### Features
+
+* 🎸 add equal fucntion ([e575c1b](https://github.com/unipackage/utils/commit/e575c1b4f96b348849dfb7c87252144991161b6b))
+
 # [1.0.0](https://github.com/unipackage/utils/compare/v0.1.8...v1.0.0) (2023-12-14)
 
 
