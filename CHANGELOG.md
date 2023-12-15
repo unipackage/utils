@@ -1,5 +1,12 @@
 
 
+# [1.2.0](https://github.com/unipackage/utils/compare/v1.1.1...v1.2.0) (2023-12-15)
+
+
+### Features
+
+* 🎸 function parse array to struct ([32ec27c](https://github.com/unipackage/utils/commit/32ec27c78a17e68b7d7f7b7b7b06cbd16d2a4a3a)), closes [#3](https://github.com/unipackage/utils/issues/3)
+
 ## [1.1.1](https://github.com/unipackage/utils/compare/v1.1.0...v1.1.1) (2023-12-14)
 
 
