@@ -20,8 +20,8 @@
 
 // Define an index signature to represent a structure of unknown type
 type unknownStruct = {
-    [key: string]: any;
-};
+    [key: string]: any
+}
 
 /**
  * Parses an array into a structure of unknown type.
@@ -30,18 +30,32 @@ type unknownStruct = {
  * @returns The populated object structure.
  */
 export function parseArrayToStruct<T extends unknownStruct>(
-    structObj: T, arrayValues: unknown[]
+    structObj: T,
+    arrayValues: unknown[]
 ): T {
     // Get all keys of the object
-    const keys = Object.keys(structObj) as (keyof T)[];
+    const keys = Object.keys(structObj) as (keyof T)[]
 
     keys.forEach((key, index) => {
         if (index >= arrayValues.length) {
-            return structObj;
+            return structObj
         }
-        // Use type assertion to assign values
-        structObj[key] = arrayValues[index] as T[keyof T];
-    });
 
-    return structObj;
+        const arrayElement = arrayValues[index]
+        const structElementType = typeof structObj[key]
+        const arrayElementType = typeof arrayElement
+
+        if (structElementType.includes(arrayElementType)) {
+            // @ts-ignore
+            structObj[key] = arrayElement
+        } else {
+            throw new Error(
+                `parseArrayToStruct error: can't assgin ${
+                    arrayElementType + ":[" + arrayElement + "]"
+                } to ${structElementType} `
+            )
+        }
+    })
+
+    return structObj
 }

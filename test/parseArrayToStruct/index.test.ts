@@ -24,8 +24,8 @@ import { parseArrayToStruct } from "../../src/parseArrayToStruct"
 
 // Sample struct for testing
 class SampleStruct {
-    element1: string = ''
-    element2: string = ''
+    element1: string = ""
+    element2: string = ""
     element3: number = 0
     element4: boolean = false
     element5: number = 0
@@ -38,7 +38,6 @@ describe("parseArrayToStruct function test", () => {
 
         // Using the parseArrayToStruct function to parse array to struct
         const result = parseArrayToStruct(new SampleStruct(), arrayValues)
-        console.log("sdf", result.element1)
         expect(result.element1).to.equal(arrayValues[0])
         expect(result.element2).to.equal(arrayValues[1])
         expect(result.element3).to.equal(arrayValues[2])
@@ -50,16 +49,14 @@ describe("parseArrayToStruct function test", () => {
     it("parseArrayToStruct uncorrect", () => {
         const arrayValues = ["hello", 99, 999, true, 100, BigInt(88)]
 
-        // Using the parseArrayToStruct function to parse array to struct
-        const result = parseArrayToStruct(new SampleStruct(), arrayValues)
-
-        expect(result.element1).to.equal(arrayValues[0])
-        expect(result.element2).to.equal(arrayValues[1])
-        expect(result.element3).to.equal(arrayValues[2])
-        expect(result.element4).to.equal(arrayValues[3])
-        expect(result.element5).to.equal(arrayValues[4])
-        expect(result.element6).to.equal(arrayValues[5])
-
-        console.log(result.element2)
+        let result
+        let errInfo = ""
+        try {
+            result = parseArrayToStruct(new SampleStruct(), arrayValues)
+        } catch (error) {
+            errInfo = (error as Error).toString()
+        }
+        expect(result).to.equal(undefined)
+        expect(errInfo.includes("Error")).to.equal(true)
     })
 })
