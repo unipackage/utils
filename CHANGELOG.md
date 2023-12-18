@@ -1,5 +1,12 @@
 
 
+# [1.3.0](https://github.com/unipackage/utils/compare/v1.2.0...v1.3.0) (2023-12-18)
+
+
+### Features
+
+* 🎸 add withMethods ([394c3c1](https://github.com/unipackage/utils/commit/394c3c1ad099f41ce6cbf32673b483ffd3348ef4))
+
 # [1.2.0](https://github.com/unipackage/utils/compare/v1.1.1...v1.2.0) (2023-12-15)
 
 
