@@ -1,5 +1,12 @@
 
 
+# [1.4.0](https://github.com/unipackage/utils/compare/v1.3.0...v1.4.0) (2023-12-18)
+
+
+### Features
+
+* 🎸 export withMethods ([a334869](https://github.com/unipackage/utils/commit/a334869b92ca4a23d59057114ccdd0a2815ba7f7))
+
 # [1.3.0](https://github.com/unipackage/utils/compare/v1.2.0...v1.3.0) (2023-12-18)
 
 
