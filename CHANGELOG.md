@@ -1,5 +1,13 @@
 
 
+# [1.5.0](https://github.com/unipackage/utils/compare/v1.4.0...v1.5.0) (2024-01-02)
+
+
+### Features
+
+* 🎸 add delay function ([aa5455c](https://github.com/unipackage/utils/commit/aa5455c604847719514ee6aeb6980ea7b00c1ff9))
+* 🎸 export delay ([ec36700](https://github.com/unipackage/utils/commit/ec36700701340985c3a91ef7b1df759dff0e6e25))
+
 # [1.4.0](https://github.com/unipackage/utils/compare/v1.3.0...v1.4.0) (2023-12-18)
 
 
