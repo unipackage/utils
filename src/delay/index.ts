@@ -22,6 +22,6 @@
  * Utility function to introduce a delay.
  * @param ms - The delay time in milliseconds.
  */
-function delay(ms: number): Promise<void> {
+export function delay(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms))
 }
