@@ -1,5 +1,5 @@
 /*******************************************************************************
- *   (c) 2023 unipackage
+ *   (c) 2024 unipackage
  *
  *  Licensed under either the MIT License (the "MIT License") or the Apache License, Version 2.0
  *  (the "Apache License"). You may not use this file except in compliance with one of these
@@ -18,11 +18,4 @@
  *  limitations under the respective licenses.
  ********************************************************************************/
 
-export { ValueFields } from "./valueFields"
-export { FromType } from "./fromType"
-export { Result } from "./result"
-export { Capacity, DefaultCapacityOptions } from "./capacity"
-export { EnhanceNumber } from "./enhanceNumber"
-export { equal } from "./equal"
-export { withMethods } from "./withMethods"
-export { delay } from "./delay"
+export type FromType<T, K extends keyof T> = Pick<T, K>
