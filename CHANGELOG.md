@@ -1,5 +1,12 @@
 
 
+# [1.6.0](https://github.com/unipackage/utils/compare/v1.5.0...v1.6.0) (2024-01-06)
+
+
+### Features
+
+* 🎸 add FromType ([324bb61](https://github.com/unipackage/utils/commit/324bb61312df358b9ff58f39cd657b7db6990bb0))
+
 # [1.5.0](https://github.com/unipackage/utils/compare/v1.4.0...v1.5.0) (2024-01-02)
 
 
