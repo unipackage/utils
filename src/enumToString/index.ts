@@ -1,5 +1,5 @@
 /*******************************************************************************
- *   (c) 2023 unipackage
+ *   (c) 2024 dataswap
  *
  *  Licensed under either the MIT License (the "MIT License") or the Apache License, Version 2.0
  *  (the "Apache License"). You may not use this file except in compliance with one of these
@@ -18,12 +18,23 @@
  *  limitations under the respective licenses.
  ********************************************************************************/
 
-export { ValueFields } from "./valueFields"
-export { FromType } from "./fromType"
-export { Result } from "./result"
-export { Capacity, DefaultCapacityOptions } from "./capacity"
-export { EnhanceNumber } from "./enhanceNumber"
-export { equal } from "./equal"
-export { withMethods } from "./withMethods"
-export { delay } from "./delay"
-export { enumToString } from "./enumToString"
+export const enumToString = <T extends Record<string, string | number>>(
+    enumObj: T,
+    value: T[keyof T]
+): string | undefined => {
+    const keys = Object.keys(enumObj) as (keyof T)[]
+    const matchedKey = keys.find((key) => enumObj[key] === value)
+    return matchedKey ? String(matchedKey) : undefined
+}
+
+// // Example usage:
+// enum CarReplicaState {
+//     None = 0,
+//     Matched = 1,
+//     Stored = 2,
+//     StorageFailed = 3,
+//     Slashed = 4,
+//     Expired = 5,
+// }
+// const stateString = enumToString(CarReplicaState, CarReplicaState.Matched)
+// console.log(stateString) // Output: "Matched"
