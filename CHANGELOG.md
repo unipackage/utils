@@ -1,5 +1,12 @@
 
 
+# [1.7.0](https://github.com/unipackage/utils/compare/v1.6.0...v1.7.0) (2024-01-18)
+
+
+### Features
+
+* 🎸 add enumToString ([28f82ed](https://github.com/unipackage/utils/commit/28f82edc348f9263538a76c5bd57c62b51a8c90e))
+
 # [1.6.0](https://github.com/unipackage/utils/compare/v1.5.0...v1.6.0) (2024-01-06)
 
 
